@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+body {
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #115375, #11cfe9);  
+    
+}
+
+/* .form-submit {
+    /* The image used */
+    /* background-image: url("img_nature.jpg"); */
+  
+    /* min-height: 380px; */
+  
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+  /* } */ 
+
+#name, #list, #searchbar{
+    border-radius: 5px;
+}
+
+.form-submit {
+    /* background-color: rgb(rgb(8, 103, 247), rgb(28, 142, 207), rgb(32, 179, 224)); */
+    padding: 15px;
+    /* margin: 0 480px; */
+    margin-left: 400px;
+    /* margin-right: 0px; */
+    height: 100%;
+    position: fixed;
+    text-align: left;
+    border-style: ridge;
+    background: #fff;
+    width: 43%;
+  }
+button {
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3f7edf;
+    border-color: #3f7edf;
+    padding: 4px 10px;
+    margin-left: 8px;
+}
+
+hr {
+    margin-top: 10px;
+}
