@@ -21,21 +21,25 @@
                     <input type="name" placeholder="Emri" id="name">
                     <label for="Studenti"></label>
                     <select name="Studenti" id="list">
-                        <option value="student">Studenti</option>
-                        <option value="mesues">Mësues</option>
+                        <option value="Student">Studenti</option>
+                        <option value="Mësues">Mësues</option>
                     </select>
-                    <button onclick='return addUser();'><strong> + SHTO</strong></button>
+                    <button id="button" onclick='return addUser();'><strong> + SHTO</strong></button>
                     <hr><br>
                     <input type="search" id="searchbar" name="search" placeholder="Kërko">
-                    <div>
+                    <div class="outputUsers">
+                        <img alt="Avatar Photo" class="profile" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png" style="width: 30px;">
+                        </div>
+                        <div>
                         <ul id="users" style="list-style-type: none;">
                         </ul>
+                        </div>
+                        <div>
+                            <span class="close">&#10005;</span>
+                        </div>
                         <table>
                             <tr>
-                                <td align="center" class="profile-image" style="font-size: 0px;">
-                                    <img class="adapt-img"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
-                                        alt style="display: block;" width="30">
+                                <td class="profile" style="font-size: 0px;">
                                 </td>
                                 <td>
                                     <ul id="users" style="list-style-type: none;">

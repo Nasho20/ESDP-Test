@@ -1,13 +1,19 @@
 function addUser() {
+  var showProfile = document.getElementsByClassName("profile");
   var users = document.getElementById('users');
   var name = document.getElementById('name').value;
   var list = document.getElementById('list').value;
-  // var profileImage = document.getElementsByClassName('profile-image').value
   var entry = document.createElement('li');
+  // var entryPhoto = document.createElement('photo');
+  // entryPhoto.appendChild(document.createTextNode(profile));
   entry.appendChild(document.createTextNode(name + ' ' + list));
+  // showProfile.appendChild(entryPhoto);
   users.appendChild(entry);
   return false;
+  // var profile = document.getElementsByClassName('profile').style.display = 'block';
+  // var clickButton = document.getElementById('button').style.display = 'none';
 }
+
 
 // var myNodelist = document.getElementsByTagName("UL");
 // var i;
