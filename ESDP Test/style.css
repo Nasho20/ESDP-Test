@@ -1,33 +1,37 @@
 * {
     box-sizing: border-box;
     margin-top: 0;
-  }
+}
+
 body {
     place-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
+html {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(90deg, #115375, #11cfe9);  
-    
+    background: linear-gradient(90deg, #115375, #11cfe9);
+    min-width: 450px;
+
 }
 
 /* .form-submit {
     /* The image used */
-    /* background-image: url("img_nature.jpg"); */
-  
-    /* min-height: 380px; */
-  
-    /* Center and scale the image nicely */
-    /* background-position: center;
+/* background-image: url("img_nature.jpg"); */
+
+/* min-height: 380px; */
+
+/* Center and scale the image nicely */
+/* background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; */
-  /* } */ 
+/* } */
 
-#name, #list, #searchbar{
+#name,
+#list,
+#searchbar {
     border-radius: 5px;
 }
 
@@ -43,7 +47,8 @@ html{
     border-style: ridge;
     background: #fff;
     width: 43%;
-  }
+}
+
 button {
     border-radius: 5px;
     color: #fff;
