@@ -20,13 +20,14 @@ html {
     .form-submit {
         margin: auto;
         position: fixed;
-        padding-right: 30px;    
+        padding-right: 30px;
     }
 }
 
 .profile {
     display: none;
 }
+
 .close {
     position: absolute;
     right: 0;
@@ -38,7 +39,8 @@ html {
 .close:hover {
     background-color: #f44336;
     color: white;
-  }
+}
+
 #name,
 #list,
 #searchbar {

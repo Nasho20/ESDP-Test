@@ -1,18 +1,75 @@
+// function addUser() {
+//   // var showProfile = document.getElementsByClassName("profile");
+//   var users = document.getElementByClassName('users');
+//   var name = document.getElementById('name').value;
+//   var list = document.getElementById('list').value;
+//   var entry = document.createElement('li');
+//   // var entryPhoto = document.createElement('photo');
+//   // entryPhoto.appendChild(document.createTextNode(profile));
+//   entry.appendChild(document.createTextNode(name + ' ' + list));
+//   // showProfile.appendChild(entryPhoto);
+//   users.appendChild(entry);
+//   return false;
+// }
+
+
+
+
 function addUser() {
-  var showProfile = document.getElementsByClassName("profile");
-  var users = document.getElementById('users');
+  var profile = document.getElementsByClassName('profile');
+  var capture = profile.toDataUrl('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png');
+  var users = document.getElementsByClassName("users");
   var name = document.getElementById('name').value;
   var list = document.getElementById('list').value;
+  var close = document.getElementsByClassName('close');
   var entry = document.createElement('li');
-  // var entryPhoto = document.createElement('photo');
-  // entryPhoto.appendChild(document.createTextNode(profile));
-  entry.appendChild(document.createTextNode(name + ' ' + list));
-  // showProfile.appendChild(entryPhoto);
+  entry.appendChild(document.createTextNode(capture + name + ' ' + list + close));
   users.appendChild(entry);
-  return false;
-  // var profile = document.getElementsByClassName('profile').style.display = 'block';
-  // var clickButton = document.getElementById('button').style.display = 'none';
 }
+// var profile = document.getElementsByClassName('profile').style.display = 'block';
+// var clickButton = document.getElementById('button').style.display = 'none';
+
+// var myList = document.getElementsByTagName('li');
+// var i;
+// for (i = 0; i < myList.length; i++) {
+//   var span = document.createElement("span");
+//   var txt = document.createTextNode('\u00D7');
+//   span.className = "close";
+//   span.appendChild(txt);
+//   myList[i].appendChild(span);
+// }
+
+// var close = document.getElementsByClassName("close");
+// var i;
+// for (i = 0; i < close.length; i++) {
+//   close[i].onClick = function () {
+//     var div = this.parentElement;
+//     div.style.display = "none";
+//   }
+// }
+
+// function addUser() {
+//   var li = document.createElement("li");
+//   var inputName = document.getElementById("name").value;
+//   var t = document.createTextNode(inputName);
+//   li.appendChild(t);
+
+//   document.getElementById("name").value = "";
+
+//   var span = document.createElement("span");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   li.appendChild(span);
+
+//   for (i = 0; i < close.length; i++) {
+//     close[i].onClick = function () {
+//       var div = this.parentElement;
+//       div.style.display = "none";
+//     }
+//   }
+
+// }
 
 
 // var myNodelist = document.getElementsByTagName("UL");
