@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://file:///C:/Users/Lenovo/OneDrive%20-%20EDRA%20Spa%20-%20LSWR/Documents/Esdp/ESDP%20Test/index.html?Studenti=Student&search=",
+            "request": "launch",
+            "url": "http://file:///C:/Users/Lenovo/OneDrive%20-%20EDRA%20Spa%20-%20LSWR/Documents/Esdp/ESDP%20Test/index.html?Studenti=Student&search="
+        }
+    ]
+}

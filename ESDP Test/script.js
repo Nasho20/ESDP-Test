@@ -17,16 +17,22 @@
 
 function addUser() {
   var profile = document.getElementsByClassName('profile');
-  var capture = profile.toDataUrl('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png');
   var users = document.getElementsByClassName("users");
-  var name = document.getElementById('name').value;
+  var name = document.getElementById("name").value;
   var list = document.getElementById('list').value;
   var close = document.getElementsByClassName('close');
   var entry = document.createElement('li');
-  entry.appendChild(document.createTextNode(capture + name + ' ' + list + close));
+  entry.appendChild(document.createTextNode(profile + name + ' ' + list + close));
   users.appendChild(entry);
 }
-// var profile = document.getElementsByClassName('profile').style.display = 'block';
+
+// function addUser() {
+//   var items = document.getElementById('name').value
+//   var text = document.createTextNode(items)
+//   var newItem = document.createElement("li");
+//   newItem.appendChild(text)
+// }
+// // var profile = document.getElementsByClassName('profile').style.display = 'block';
 // var clickButton = document.getElementById('button').style.display = 'none';
 
 // var myList = document.getElementsByTagName('li');
