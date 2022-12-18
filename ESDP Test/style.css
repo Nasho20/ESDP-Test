@@ -29,11 +29,7 @@ html {
 }
 
 .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
-    display: none;
+    background-color: #3f7edf;
 }
 
 .close:hover {
@@ -70,4 +66,17 @@ button {
 
 hr {
     margin-top: 10px;
+}
+
+.userImage {
+    width: 20px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between
+}
+
+.users {
+    padding-left: 0;
 }

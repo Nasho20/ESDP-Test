@@ -16,15 +16,89 @@
 
 
 function addUser() {
-  var profile = document.getElementsByClassName('profile');
   var users = document.getElementsByClassName("users");
   var name = document.getElementById("name").value;
   var list = document.getElementById('list').value;
-  var close = document.getElementsByClassName('close');
   var entry = document.createElement('li');
-  entry.appendChild(document.createTextNode(profile + name + ' ' + list + close));
-  users.appendChild(entry);
+  entry.classList.add('userRow');
+  entry.classList.add("user");
+  const newDiv = document.createElement("div");
+  const userName = document.createElement("p");
+  const userPosition = document.createElement("p");
+  userName.classList.add('username');
+  userPosition.classList.add('userposition');
+
+  newDiv.classList.add("close");
+  const userImage = document.createElement("img");
+  userImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png");
+  userImage.setAttribute("class", "userImage");
+
+  const newContent = document.createTextNode("X");
+  newDiv.appendChild(newContent);
+  entry.appendChild(userImage);
+  userName.appendChild(document.createTextNode(name));
+  userPosition.appendChild(document.createTextNode(list));
+  entry.appendChild(userName);
+  entry.appendChild(userPosition);
+
+  entry.appendChild(newDiv);
+  users[0].appendChild(entry);
+
 }
+
+function filterUsers() {
+  var input, filter, ul, li, p, i, txtValue;
+  input = document.getElementById('name');
+  filter = input.value.toUpperCase();
+  var ul = document.getElementsByClassName('user');
+  var li = document.getElementsByTagName('userRow');
+
+  for (i = 0; i < ul.length; i++) {
+    p = li[i].getElementsByClassName('username');
+    txtValue = p.txtContent || p.innerText;
+
+    var filters = filter.split(" ")
+    filter = filters.filter(f => f.length)
+
+    var shouldAppear = true
+    filters.forEach(filt => {
+      shouldAppear = shouldAppear && txtValue.toUpperCase().includes(filt)
+    })
+    li[i].style.display = (shouldAppear || filters.length === 0) ? "" : "none";
+
+
+    if (!filter) {
+      console.log('')
+      // } else {
+      // console.log('is not')
+    }
+  }
+}
+// function myFunction() {
+//   console.log('here')
+// }
+
+// Search button
+// function myFunction() {
+//   // Declare variables
+//   var input, filter, ul, li, a, i, txtValue;
+//   input = document.getElementById('myInput');
+//   filter = input.value.toUpperCase();
+//   ul = document.getElementById("myUL");
+//   li = ul.getElementsByTagName('li');
+
+//   // Loop through all list items, and hide those who don't match the search query
+//   for (i = 0; i < li.length; i++) {
+//     a = li[i].getElementsByTagName("a")[0];
+//     txtValue = a.textContent || a.innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       li[i].style.display = "";
+//     } else {
+//       li[i].style.display = "none";
+//     }
+//   }
+// }
+
 
 // function addUser() {
 //   var items = document.getElementById('name').value
@@ -95,38 +169,4 @@ function addUser() {
 //     var div = this.parentElement;
 //     div.style.display = "none";
 //   }
-// }
-
-
-// <form id="myform">
-//   <h2>Add a User:</h2>
-//   <input id="username" type="text" name="username" placeholder="name">
-//     <input id="email" type="email" name="email" placeholder="email">
-//       <button onclick='return addUser();' type="submit">add user</button>
-//     </form>
-
-
-//     <h2>UsersList:</h2>
-//     <ul id="users"></ul>
-
-// function pushRules(list){
-//     var rules = "";
-
-//     var w1 = document.getElementById('name').value;
-//     var w = w1+'-->'+w2;
-//     var li = document.createElement("li");
-//     var rule = document.createTextNode(w);
-//     li.appendChild(rule);
-
-//     var removeBtn = document.createElement("input");
-//     removeBtn.type = "button";
-//     removeBtn.value = "Remove";
-//     removeBtn.onclick = remove;
-//     li.appendChild(removeBtn);
-//     document.getElementById("list").appendChild(li);
-// }
-
-// function remove(e) {
-//   var el = e.target;
-//   el.parentNode.remove();
 // }
